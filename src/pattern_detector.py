@@ -28,7 +28,7 @@ def detect_patterns(retrieved_chunks: list[dict]) -> dict:
 
     # ── 2. HDBSCAN clustering ──────────────────────────────────────────────
     # min_cluster_size=2 because retrieved set is small (10-20 chunks)
-    clusterer = hdbscan.HDBSCAN(min_cluster_size=2, metric="euclidean")
+    clusterer = hdbscan.HDBSCAN(min_cluster_size=2, min_samples=1, metric="euclidean", cluster_selection_epsilon=0.3)
     labels = clusterer.fit_predict(embeddings)
 
     # Group chunks by cluster
