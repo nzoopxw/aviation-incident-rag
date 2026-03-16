@@ -71,7 +71,7 @@ def retrieve(query: str, top_k: int = 20, filters: dict = None) -> list[dict]:
     scores = reranker.predict(pairs)
     
     ranked = sorted(zip(scores, candidates), key=lambda x: x[0], reverse=True)
-    top_results = [doc for _, doc in ranked[:10]]  # return top 10 after reranking
+    top_results = [doc for _, doc in ranked[:20]]  # return top 10 after reranking
 
     return top_results
 
