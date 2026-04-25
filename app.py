@@ -15,7 +15,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("✈️ Aviation Incident Report Pattern Finder")
+st.title("Aviation Incident Report Pattern Finder")
 st.caption("Powered by NASA ASRS dataset (2022–2024) · Hybrid RAG + Semantic Clustering")
 
 # ── Sidebar filters ────────────────────────────────────────────────────────

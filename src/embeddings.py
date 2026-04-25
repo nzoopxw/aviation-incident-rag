@@ -80,4 +80,4 @@ for i in range(0, len(chunks), BATCH_SIZE):
     print(f"  [{done}/{len(chunks)}] {elapsed:.1f}s elapsed")
 
 print(f"\nDone! All {len(chunks)} chunks embedded and stored in Qdrant.")
-print(f"Total time: {(time.time() - start) / 60:.1f} minutes")
+print(f"Total time: {(time.time() - start) / 60:.1f} minutes")  
